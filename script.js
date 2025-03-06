@@ -69,3 +69,9 @@ function updateDisplay(seconds) {
     let sec = seconds % 60;
     display.innerHTML = `${String(min).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
 }
+
+// Dark Mode Toggle
+themeToggle.addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+    themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+});
