@@ -64,3 +64,21 @@ button:hover {
     background: #28a745;
     transition: width 1s linear;
 }
+/* Dark Mode */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #333;
+}
+
+.dark-mode button {
+    background: #ffcc00;
+    color: black;
+}
+
+.dark-mode button:hover {
+    background: #d4a700;
+}
