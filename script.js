@@ -19,3 +19,28 @@ startBtn.addEventListener("click", function() {
         startCountdown();
     }
 });
+
+// Countdown Function
+function startCountdown() {
+    clearInterval(countdown);
+    isPaused = false;
+    updateDisplay(timeLeft);
+
+    let initialTime = timeLeft;
+    progressBar.style.width = "100%";
+
+    countdown = setInterval(() => {
+        if (!isPaused) {
+            timeLeft--;
+            updateDisplay(timeLeft);
+            progressBar.style.width = (timeLeft / initialTime) * 100 + "%";
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                display.innerHTML = "⏰ Time's Up!";
+                progressBar.style.width = "0%";
+                alarmSound.play();
+            }
+        }
+    }, 1000);
+}
