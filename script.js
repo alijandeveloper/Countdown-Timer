@@ -49,7 +49,16 @@ function startCountdown() {
 pauseBtn.addEventListener("click", function() {
     isPaused = true;
 });
+
 // Resume Timer
 resumeBtn.addEventListener("click", function() {
     isPaused = false;
+});
+
+// Reset Timer
+resetBtn.addEventListener("click", function() {
+    clearInterval(countdown);
+    updateDisplay(0);
+    progressBar.style.width = "0%";
+    timeInput.value = "";
 });
