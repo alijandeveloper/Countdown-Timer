@@ -62,3 +62,10 @@ resetBtn.addEventListener("click", function() {
     progressBar.style.width = "0%";
     timeInput.value = "";
 });
+
+// Update Display
+function updateDisplay(seconds) {
+    let min = Math.floor(seconds / 60);
+    let sec = seconds % 60;
+    display.innerHTML = `${String(min).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
+}
