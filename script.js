@@ -11,3 +11,11 @@ const display = document.getElementById("display");
 const progressBar = document.getElementById("progress");
 const themeToggle = document.getElementById("theme-toggle");
 const alarmSound = document.getElementById("alarm");
+
+// Start Timer
+startBtn.addEventListener("click", function() {
+    if (timeInput.value > 0) {
+        timeLeft = parseInt(timeInput.value);
+        startCountdown();
+    }
+});
