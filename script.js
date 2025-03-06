@@ -44,3 +44,8 @@ function startCountdown() {
         }
     }, 1000);
 }
+
+// Pause Timer
+pauseBtn.addEventListener("click", function() {
+    isPaused = true;
+});
