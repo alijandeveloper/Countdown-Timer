@@ -49,3 +49,7 @@ function startCountdown() {
 pauseBtn.addEventListener("click", function() {
     isPaused = true;
 });
+// Resume Timer
+resumeBtn.addEventListener("click", function() {
+    isPaused = false;
+});
